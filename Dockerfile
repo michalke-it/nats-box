@@ -10,8 +10,8 @@ RUN apk add -U --no-cache git binutils
 
 RUN go get github.com/nats-io/nats-top
 
-RUN GO111MODULE=on go get -u -ldflags "-X main.version=0.4.10" github.com/nats-io/nsc@0.4.10
-RUN GO111MODULE=on go get -u -ldflags "-X main.version=0.0.18" github.com/nats-io/jetstream/nats@v0.0.18
+RUN GO111MODULE=on go get -ldflags "-X main.version=0.4.10" github.com/nats-io/nsc@0.4.10
+RUN GO111MODULE=on go get -ldflags "-X main.version=0.0.18" github.com/nats-io/jetstream/nats@v0.0.18
 RUN go get github.com/nats-io/stan.go/examples/stan-pub
 RUN go get github.com/nats-io/stan.go/examples/stan-sub
 
